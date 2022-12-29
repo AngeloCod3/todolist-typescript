@@ -1,10 +1,10 @@
 
 import './App.scss'
-import Button from './Button'
 import Input from './Input'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import React, { useState } from 'react'
 import { Todo } from './model'
+import TodoList from './TodoList'
 
 const App: React.FC = () => {
 
@@ -24,9 +24,9 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1>Taskity</h1>
+      <h1 className='mt-5 mb-5'>Taskity</h1>
       <Input todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      {todos.map(t =>(<li>{t.todo}</li>))}
+      <TodoList todos={todos} setTodos={setTodos}/>
     </div>
   )
 }

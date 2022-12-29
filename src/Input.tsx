@@ -2,7 +2,7 @@ import React from 'react';
 
 interface Props {
   todo: string,
-  setTodo: React.Dispatch<React.SetStateAction<string | number>>,
+  setTodo: React.Dispatch<React.SetStateAction<string>>,
   handleAdd: (e: React.FormEvent) => void
 }
 
